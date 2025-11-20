@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { HiOutlinePencil, HiOutlineTrash, HiOutlineCube, HiOutlineCheckCircle, HiOutlineXCircle, HiOutlineBell } from 'react-icons/hi2';
+import { HiOutlinePencilSquare, HiOutlineTrash, HiOutlineCube, HiOutlineCheckCircle, HiOutlineXCircle, HiOutlineBell } from 'react-icons/hi2';
 import type { Review } from '../types/review';
 import ConfirmDialog from './ConfirmDialog';
 
@@ -71,7 +71,7 @@ function ReviewCard({ review, onEdit, onDelete }: ReviewCardProps) {
             onClick={() => onEdit(review)}
             aria-label="Edit review"
           >
-            <HiOutlinePencil />
+            <HiOutlinePencilSquare />
           </button>
           <button
             className="btn btn-delete"
