@@ -1,15 +1,24 @@
 import type { Review, ReviewUpdate } from '../types/review';
 
-const API_BASE_URL = 'https://tws-backend-jssr.up.railway.app';
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://tws-backend-jssr.up.railway.app';
+
+if (!API_BASE_URL) {
+  throw new Error('VITE_API_BASE_URL is not defined');
+}
 
 class ApiError extends Error {
+  status?: number;
+  statusText?: string;
+
   constructor(
     message: string,
-    public status?: number,
-    public statusText?: string
+    status?: number,
+    statusText?: string
   ) {
     super(message);
     this.name = 'ApiError';
+    this.status = status;
+    this.statusText = statusText;
   }
 }
 

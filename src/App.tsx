@@ -4,7 +4,7 @@ import './App.css';
 import ReviewList from './components/ReviewList';
 import ReviewForm from './components/ReviewForm';
 import { api } from './services/api';
-import { useTheme } from './contexts/ThemeContext';
+import { useTheme } from './hooks/useTheme';
 import type { Review } from './types/review';
 
 type ViewMode = 'list' | 'edit';
