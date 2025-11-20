@@ -44,7 +44,7 @@ function ReviewList({ onEdit, onDelete, refreshTrigger, onRefresh }: ReviewListP
     // Auto-refresh every minute
     const interval = setInterval(() => {
       loadReviews();
-    }, 60000); // 60 seconds (1 minute)
+    }, 5000); // 5 seconds
 
     return () => clearInterval(interval);
   }, []);
