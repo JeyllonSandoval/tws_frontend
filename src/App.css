@@ -249,7 +249,7 @@
   margin-top: 1.5rem;
   margin-bottom: 1rem;
   flex-wrap: wrap;
-  padding: 1rem;
+  padding: 0.5rem 1rem;
   background: var(--bg-secondary);
   border-radius: 8px;
   border: 1px solid var(--border-color);
